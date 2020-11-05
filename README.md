@@ -1,3 +1,7 @@
+# OpenMP
+
+[Memoria](https://drive.google.com/file/d/1wxbVAIxdkZhOwiKphuojJ-F4dqZhjVoj/view?usp=sharing)
+
 # 1. Objetivo
 
 Esta práctica tiene como objetivo fundamental hacer el que los estudiantes se familiaricen con la optimización de programas secuenciales y con los modelos de programación paralela en
