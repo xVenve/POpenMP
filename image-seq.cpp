@@ -9,6 +9,7 @@ using namespace std;
 using namespace std::chrono;
 using clk = chrono::high_resolution_clock;
 
+void gauss(int, int, unsigned char *, unsigned char *);
 
 int main(int argc, char **argv) {
 
