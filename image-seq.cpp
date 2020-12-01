@@ -4,7 +4,6 @@
 #include <dirent.h>
 #include <fstream>
 #include <iostream>
-#include <stdio.h>
 #include <stdlib.h>
 using namespace std;
 using namespace std::chrono;
@@ -92,32 +91,8 @@ int main(int argc, char **argv) {
       int height = *(int *)&info[22];
 
       // 24 bits = 3 bytes por pixel
-      // int size = 53760000;
       int size = *(int *)&info[2] - *(int *)&info[10];
       unsigned char *data = new unsigned char[size];
-      // std::cout << " size \t\t\t" <<size <<'\n';
-      //
-      // std::cout << " info2 \t\t\t" <<(*(int *)&info[2]) <<'\n';
-      // std::cout << " info2-info10 \t\t" <<(*(int *)&info[2] - *(int
-      // *)&info[10]) <<'\n'; std::cout << " width*height*3 \t" <<(
-      // width*height*3) <<'\n'; std::cout << " info34 \t\t" <<(*(int
-      // *)&info[34]) <<'\n';
-
-      // cout << *(unsigned short *)&info[0] << '\n';
-      // cout << *(int *)&info[2] << '\n';
-      // cout << *(int *)&info[6] << '\n';
-      // cout << *(int *)&info[10] << '\n';
-      // cout << *(int *)&info[14] << '\n';
-      // cout << *(int *)&info[18] << '\n';
-      // cout << *(int *)&info[22] << '\n';
-      // cout << *(unsigned short *)&info[26] << '\n';
-      // cout << *(unsigned short *)&info[28] << '\n';
-      // cout << *(int *)&info[30] << '\n';
-      // cout << *(int *)&info[34] << '\n';
-      // cout << *(int *)&info[38] << '\n';
-      // cout << *(int *)&info[42] << '\n';
-      // cout << *(int *)&info[46] << '\n';
-      // cout << *(int *)&info[50] << '\n';
 
       // Error de .bmp que no tenga un plano
       if (*(unsigned short *)&info[26] != 1) {
@@ -367,8 +342,6 @@ void gauss(int width, int height, unsigned char *data, unsigned char *res) {
                  {4, 16, 26, 16, 4},
                  {1, 4, 7, 4, 1}};
 
-  // int row_padded = (width*3+3) & (~3);
-  // unsigned char* padded_data = new unsigned char [rowpadded];
   int pad = 0;
   for (int i = 0; i < height; i++) {
     pad += (width % 4);
