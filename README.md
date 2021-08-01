@@ -1,4 +1,4 @@
-# OpenMP
+# OpenMP ![GitHub repo size](https://img.shields.io/github/repo-size/xVenve/POpenMP)
 
 [Memoria](https://drive.google.com/file/d/1wxbVAIxdkZhOwiKphuojJ-F4dqZhjVoj/view?usp=sharing)
 
